@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+
+    <title>Tshenolo L</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="noise"></div>
+    <div class="overlay"></div>
+    <main>
+        <section style="height: 100vh;" class="header">
+            <header>
+                <div class="header-top">
+                  <a href="./index.html" class='logo'>  /Tshenolo Lobelo</a>
+           
+                  <p class="location">/Based in Johannesburg<br> /South Africa</p>
+           <ul class="menu-list">
+    
+    <li><a href="#biography">/BIOGRAPHY</a></li>
+    <li><a href="#projects">/PROJECTS</a></li>
+    <li><a href="#skills">/SKILLS</a></li>
+    <li><a href="">/CONTACT</a></li>
+           </ul>
+                </div>
+            </header>
+    <div class="name-image">
+        <h1 class="name">Tshenolo Lobelo<span class="blink">_</span></h1>
+    
+        <img src="./images/ts-portfolio.jpeg" alt="" class="img-top">
+    
+    </div>
+    
+       
+        <section class="header-bottom">
+        <div class="arrow" style="font-size: 6rem;">↓</div>
+        <div><p>/I SUPPORT DESIGNERS AND BUSINESSES WITH CREATIVE DEVELOPMENT</p></div>
+        <div><h3>/FRONTEND <br /> Developer</h3></div>
+
+        </section>
+    </section>
+    <section class="biography" style="height: 100vh;" id="biography">
+        <h2 class="section-title"> ><span class="blink">_</span> Biography</h2>
+     <div><p class="js-text2">  <!--  /A complete website from concept to implementation, that's what makes me stand out. -->
+           My great sense for design and my development skills enable me to create kick-ass projects.</p><p class="js-text2">With a track record in designing websites and apps, I deliver strong and user-friendly digital designs.</p><p class="js-text2">I build scalable applications from scratch that fit seamlessly with design. My focus is on micro animations, transitions and interaction.</p><p class="js-text2">With each project, I push my work to new horizons, always putting quality first.</p></div>
+    </section>
+    <section class="projects section" id="projects">
+       <h2 class="section-title">><span class="blink box">_</span> Projects</h2>
+    
+        <div class="projectsWrapper">
+            <!-- single project-->
+           <div class="singleProject">
+            <div><p>C:\ 01</p>
+                <a href="" class="trigger" data-project="">case study</a>
+                </div>
+        
+                <div class="faq"> 
+                    <button class="accordion" aria-haspopup="true" aria-expanded="false">
+                                    <span id="tab-title-dimensions_tab"><h3>░░░ ░░░ <span class="project-name">Mpendulo njjj</span> ░░░ ░░░</h3></span>                
+                                    <div class="circle-animation closed" >
+                                 
+                                        <div class="horizontal"></div>
+                                        <div class="vertical"></div>
+                                    </div>
+                    </button>
+                    <div class="panel">
+                        <div class="tools">
+                            <ul>
+                             <li></li>
+                             <li></li>
+                             <li></li>
+                             <li></li>
+                            </ul>
+                        </div>
+                        
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quae excepturi molestiae unde voluptatem dolorem officiis exercitationem ea quasi, et omnis consectetur veritatis dolores in sapiente accusantium vel corporis fugit!</p>
+                    </div>
+                </div>
+           </div>
+            <!-- end of single project-->
+           
+                
+        </div>
+    </section>
+
+      
+
+    <section class="skills-wrapper section" id="skills" style="height: 100vh;">
+        <h2 class="section-title"> ><span class="blink">_</span> Skills</h2>
+    
+        <div class="accordionWrapper">
+            <div class="accordionItem open">
+                  <h2 class="accordionItemHeading">About accordions</h2>
+                  <div class="accordionItemContent">
+                    <p>JavaScript accordions let you squeeze a lot of content into a small space in a Web page.</p>
+                    <p>This simple accordion degrades gracefully in browsers that don't support JavaScript or CSS.</p>
+                  </div>
+                </div>
+            
+                <div class="accordionItem close">
+                </div>
+        </div>
+    </section>
+    <section style="position: relative;" class="game section">
+    <div class="game-intro">
+        <h3>Shall we play a game?</h3>
+        <p class="section-title" id="Type" style="font-size: 1rem;width: 100%;">
+          &gt; Let's take it back to the 90's
+        <!--   <br>&gt; 10 print "Hey there" -->
+        </p>
+        
+        <button type="button" class="btn snake-btn">Play Snake</button>
+    </div>
+      
+          <div class="gameWrapper">
+        <header class="wrap">
+         
+            <p class="score">Score: <span id="score_value">0</span></p>
+        </header>
+    
+            <canvas class="wrap" id="snake" width="520" height="520" tabindex="1"></canvas>
+    
+    
+        <!-- Game Over Screen -->
+        <div id="gameover">
+            <h2>Game Over</h2>
+            <p>press <span style="background-color: #0C0; color: #FAFAFA">space</span> to begin a</p>
+            <a id="newgame_gameover">new game</a>
+            <a id="setting_gameover">settings</a>
+        </div>
+    
+        <!-- Setting screen -->
+        <div id="setting">
+            <h2>Settings</h2>
+            
+            <a id="newgame_setting">new game</a>
+            
+            <p>Speed:
+                <input id="speed1" type="radio" name="speed" value="120" checked/>
+                <label for="speed1">Slow</label>
+                <input id="speed2" type="radio" name="speed" value="75"/>
+                <label for="speed2">Normal</label>
+                <input id="speed3" type="radio" name="speed" value="35"/>
+                <label for="speed3">Fast</label>
+            </p>
+            
+            <p>Wall:
+                <input id="wallon" type="radio" name="wall" value="1" checked/>
+                <label for="wallon">On</label>
+                 <input id="walloff" type="radio" name="wall" value="0"/>
+ <label for="walloff">Off</label>
+            </p>
+    
+        </div>
+    
+        <!-- Main Menu Screen -->
+        <div id="menu">
+            <h2>Snake</h2>
+    
+            <a id="newgame_menu">new game</a>
+            <a id="setting_menu">settings</a>
+        </div>
+      </div>
+    </section>
+    </main>
+
+<footer style="    margin-right: 4rem;">
+    <section class="contact">
+        <h2 class="section-title"> ><span class="blink">_</span> Contact</h2>
+        <ul>
+            <li><a href="mailto:demo@example.com?Subject=Contact%20from%20website">comvfvv</a></li>
+            <li><a href="">github</a></li>
+            <li><a href="https://www.instagram.com/tshenolo.dev/" target="_blank">instagram</a></li>
+        </ul>
+        <ul>
+            <li><a href="./index.html">Tshenolo Lobelo</a></li>
+            <li>Copyright &copy;<script>document.write(new Date().getFullYear())</script></li>
+            <li>
+                <span class="heart">&#9829;</span>
+            </li>
+        </ul>
+    </section>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+<script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
