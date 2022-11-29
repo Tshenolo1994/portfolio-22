@@ -1,22 +1,27 @@
+html{
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     box-sizing: border-box;
     text-transform: uppercase;
     font-family: "ModeSeven";
     background-color: #111;
     color: #fafafa;
-
     overflow-x: hidden;
     scroll-behavior: smooth;
-
 }
 main{
-    background:
-    repeating-linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0) 100%);
-background-size: auto 4px;
+    width: 100%;
+    overflow-x: hidden;
+  
+}
+*{
+    margin: 0;
+    padding: 0;
 }
 
 a{
@@ -26,6 +31,7 @@ a{
 .logo{
     position: fixed;
     left: 4%;
+    top:2%;
 }
 .btn{
     color: #0f0;
@@ -46,8 +52,10 @@ color: #fafafa;
 }
 .location{
  position: absolute;
- left:35%;
- margin-left: -8rem;
+ left:50%;
+ transform: translate(-50%, -50%);
+ top:4%;
+
 }
 .menu-list{
     display: flex;
@@ -55,7 +63,8 @@ color: #fafafa;
     align-items: center;
     list-style-type: none;
     position: fixed;
-    right: 4%;
+    right: 0%;
+    top:2%;
 }
 .menu-list li{
     border: 1px solid #0f0;
@@ -192,6 +201,7 @@ width: 92%;
         transparent 100%);
     background-repeat: no-repeat;
     animation: scan 7.5s linear 0s infinite;
+ 
   }
   
   @keyframes scan {
@@ -225,6 +235,8 @@ width: 92%;
  
   .wrap{
       margin-left: auto;
+
+     
   }
   canvas{
       display: none;
@@ -235,6 +247,8 @@ position: absolute;
 top:50%;
 left:50%;
 transform: translate(-50%,-50%);
+
+
 
   }
   canvas:focus{
@@ -257,8 +271,6 @@ transform: translate(-50%,-50%);
   .score_value{
       font-size: inherit;
   }
-  
-  
   
   /* All screens style */
   #gameover a, #setting a, #menu a{
@@ -374,7 +386,16 @@ font-size: 1.5rem;
     .projects{
         height: 100vh;
         margin-left: 4rem;
+      width: 100%;
   
+    }
+    .projects .faq{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:4rem;
+        width: 100%;
     }
     .project-header{
         display: flex;
@@ -497,8 +518,9 @@ color:#0c0;
     .faq .active i, .wc-accordion .active i {
         transform: rotate(90deg);
    }
-   .accordion  button {
-    cursor: pointer;
+   .accordion{
+
+    display: none;
  
 }
     .faq .panel, .wc-accordion .panel {
@@ -775,7 +797,8 @@ position: absolute;
               .modal-backdrop {
                 z-index: 1;
          
-                background-color: red;
+   
+            
               }
               .swiper {
                 width: 100%;
@@ -817,16 +840,7 @@ position: absolute;
               }
 
               @media screen and (max-width: 600px) {
-                .menu-list{
-                    display: none;
-                }
-                .location{
-                    position: absolute;
-                    left:95%;
-                 
-                    font-size: 1rem;
-                   
-                }
+              
                 .logo{
                     position: fixed;
                     left: 0%;
@@ -860,16 +874,7 @@ position: absolute;
         width: 17ch;
                     font-size: 2.2rem;
                 }
-           .header-bottom{
-                    display: flex;
-                    justify-content: space-between;
-                    font-size: 1rem;
-                    text-transform: uppercase;
-                    align-items: center;
-                    width: 100%;
-                margin: 0;
-                padding: 0;
-                }
+          
                 .header-bottom p{
                     display: none;
                 }
@@ -914,3 +919,326 @@ position: absolute;
   .links-wrapper a{
     color: #111;
   }
+  .pace{
+    pointer-events: none;
+  user-select: none;
+  z-index: 2000;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  border: 0px;
+  height: 1px;
+  overflow: hidden;
+  background:#1b1b1b;
+  }
+  .pace .pace-progress {
+    box-sizing: border-box;
+    transform: translate3d(0, 0, 0);
+    max-width: 400px;
+    position: fixed;
+    z-index: 2000;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    background: grey;
+  }
+  
+  .pace.pace-inactive {
+    display: none;
+  }
+  
+  #preloader{
+    width:100%;
+    height:100vh;
+    background:#101010;
+    overflow:hidden;
+    position:fixed;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 99;
+  }
+  #preloader::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, transparent 0%, rgba(32, 128, 32, 0.2) 2%, rgba(32, 128, 32, 0.8) 3%, rgba(32, 128, 32, 0.2) 3%, transparent 100%);
+    background-repeat: no-repeat;
+    animation: scan 7.5s linear 0s infinite;
+  }
+  @keyframes scan {
+    0% {
+      background-position: 0 -100vh;
+    }
+    35%, 100% {
+      background-position: 0 100vh;
+    }
+  }
+  .p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+.burger{
+    position: fixed;
+    right:0;
+    z-index:9;
+    display: none;
+
+}
+  /* @media only screen and (max-width: 768px) {
+    .menu-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        position: fixed;
+        flex-direction: column;
+     position: fixed;
+        top:0%;
+        left: 0%;
+        width: 100%;
+       background-color: #101010;
+background-size: auto 4px;
+        height: 100vh;
+        z-index: 2;
+  
+    }
+    .menu-list::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    
+        background-repeat: no-repeat;
+        animation: scan 7.5s linear 0s infinite;
+      
+      }
+      @keyframes scan {
+        0% {
+          background-position: 0 -100vh;
+        }
+        35%, 100% {
+          background-position: 0 100vh;
+        }
+      }
+    .menu-list li{
+        border: 1px solid #0f0;
+        padding: 0.8rem 2rem;
+        transition: all ease 0.5;
+        color: #0c0;
+        width: 100%;
+        margin: 0;
+        margin-left: -4rem;
+    }
+    .burger{
+        display: block;
+    }
+   
+  }
+  
+  */.topnav {
+  overflow: hidden;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+
+}
+
+.topnav a {
+border: 1px solid red;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+
+a.active, a:hover{
+
+}
+.menubtn{
+    float: right;
+    cursor: pointer;
+
+    z-index: 99;
+    position: fixed;
+    right: 4%;
+    font-size: 2rem;
+    top:2%;
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    main{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .menu-list{
+        display: flex;
+flex-direction: column;
+      width: 100%;
+      position: fixed;
+      height: 100vh;
+      background-color: #111;
+  
+   left: -100%;
+   transition: all .5s ;
+   z-index: 1;
+   overflow: hidden;
+    }
+    .menu-list li{
+        width: 100%;
+    }
+    nav .menu-list.show{
+        left: 0;
+    }
+    .location{
+        position: absolute;
+        left:25%;
+        width: 100%;
+        top:65%;
+ transform: translate(-50% -50%);
+    }
+   nav{
+    background-color: #101010;
+   }
+    .overlay {
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+        background-size: auto 4px;
+        z-index: 99;
+      }
+      .menu-list::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(0deg, transparent 0%, rgba(32, 128, 32, 0.2) 2%, rgba(32, 128, 32, 0.8) 3%, rgba(32, 128, 32, 0.2) 3%, transparent 100%);
+        background-repeat: no-repeat;
+        animation: scan 7.5s linear 0s infinite;
+      }
+      @keyframes scan {
+        0% {
+          background-position: 0 -100vh;
+        }
+        35%, 100% {
+          background-position: 0 100vh;
+        }
+      }
+      .header-bottom{
+        display: flex;
+        justify-content: space-around;
+        font-size: 1rem;
+        text-transform: uppercase;
+        align-items: center;
+   
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    }
+    .header-bottom h3{
+font-size: 1rem;
+    }
+    .singleProject{
+     width: 100%;
+}
+.projects{
+    height: 100vh;
+    margin-left: 0rem;
+  width: 100%;
+  padding: 2rem;
+
+}
+.casestudy-btn{
+    position: absolute;
+    right: 0%;
+   font-size: 1rem;
+
+
+
+
+
+}
+canvas{
+    display: none;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #0c0;
+position: absolute;
+top:50%;
+left:0%;
+transform: translate(-50%,-50%);
+
+}
+canvas{
+  
+        width: 100%;
+      
+
+}
+.gamer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menubtn{
+  
+    display: block;
+}
+.biography{
+  
+    margin-left: 2rem;
+    width: 100%;
+
+
+}
+}

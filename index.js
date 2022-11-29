@@ -361,20 +361,31 @@ const projects=[{
     year:"2022",
     tools:["Vue", "Vuetify", "Firebase","AzureDevOps" ],
     link:"https://mpendulotwodoto.web.app",
+    code:"./error.html",
     imageOne:"images/mpendulo/one.png",
     imageTwo:"images/mpendulo/two.png",
     imageThree:"images/mpendulo/three.png",
     imageFour:"images/mpendulo/four.png",
     description:"Mpendulo, which means 'answer' in Zulu, is a personal finance app with a chatbot that uses artificial intelliece to help a user manage thier finances better. The chatbot through the app links your bank account to track your spending and manages your budgeting and saving goals. some of the key features include a 'moola box' where the user sets asaving goal and Mpendulo suggest how to reach yourtegt within the desired time frame",
     task:"To build a personal finance app that uses an AI chatbot to monitor spending habits, improve saving and aids reaching financial goals ",
-    delivery:"I worked closely with the UX designers to increase the fidelity of the designs and prototype of Mpendulo. "
+    delivery:"I worked closely with the UX designers to increase the fidelity of the designs and prototype of Mpendulo. ",
+    siteText:"visit site"
+
 },
 {
     id:"02",
     title:"Maarifa blog",
     year:"2021",
+    link:"./error.html",
+    code:"https://github.com/Tshenolo1994/maarifa",
     tools:[" React", "Next.js", "Material UI", "GraphQL", ],
-    description:"Designed by women for women, Galvan London was launched in 2014 with the mission to fulfill the need for a new kind of occasionwear – clean, cool, and pared down. Currently, Galvan London has expanded into a full ready-to-wear offer, including resort wear, separates and most recently, power knits – that can be worn throughout all the moments of your day. Galvan London’s pieces are created to make you feel empowered for that important meeting, big birthday, wedding, first date or simply to be a trusted wardrobe hero that you can pull out any time to make you look, and feel, incredible from the inside out.",
+    description:"Maarifa, the swahili word for 'knowledge'. The significance of that word lies within the purpose of this blog. This blog will serve as a digital space to connect with untold stories of a very faceted continent. Africa. Through publicly available media, Maarifa blog will showcase Africa from its muzzy pre-colonial incpetion, some of continent's most influential figures, the global cultural blueprints it has set, where the continent is today and where we can see Africa going and becoming",
+    imageOne:"images/maarifa/one.png",
+imageTwo:"images/maarifa/two.png",
+imageThree:"images/maarifa/three.png",
+imageFour:"images/maarifa/four.jpg",
+siteText:"site coming soon"
+
 },
 {
     id:"03",
@@ -382,13 +393,15 @@ title:"Formula 1 quizz",
 year:"2019",
 tools:["HTML, CSS, Javascript"],
 link:"https://lhamiltonquiz.netlify.app/",
+code:"https://github.com/Tshenolo1994/Hamilton-quiz",
 imageOne:"images/hamilton/one.png",
 imageTwo:"images/hamilton/two.png",
 imageThree:"images/hamilton/three.png",
 imageFour:"images/hamilton/four.png",
 description:"After a succesful 2020 F1 season, where Lewis Hamilton tied with Michael Schuavher to become most suvessful F1 driver, this game, in a form of a quizz, takes us through Lewis Hamlton's F1 season. This game will test how well you know Lewis Hamilton, from being am ambitous toddler to arguably, the most succesful F1 driver ever.",
 task:"To build a user engaging quiz game in tibute of Lewis Hamilton's 7th championship ",
-delivery:"I was responsible for the design and development of this project "
+delivery:"I was responsible for the design and development of this project ",
+siteText:"visit site",
 },
 
 
@@ -405,10 +418,10 @@ return `
 
     </div>
     <div class="faq"> 
-    <a href=javascript:void(); type="button" class="btn btn-primary casestudy-btn" data-toggle="modal" data-target="# ${project.title}" class="case-study trigger ">case study <span class="arrow">→</span></a>
-        <button class="accordion js-text2" aria-haspopup="true" aria-expanded="false">
-                        <span id="tab-title-dimensions_tab"> C/: ${project.id} &nbsp; &nbsp; ░░░  <h3><span class="project-name">
-                        ${project.title}</span> ░░░  ↓ </h3> </span>                
+
+    <a href=javascript:void(); type="button" class="btn btn-primary casestudy-btn" data-toggle="modal" data-target="# ${project.title}" class="case-study trigger ">Case study <span class="arrow">→</span></a>
+        <button class="accordion" aria-haspopup="true" aria-expanded="false" >
+        <span>C/: ${project.id} &nbsp; ░░░ <h3 class="project-name" style="display:inline"> ${project.title}</h3>  ░░░ ░░░ ↓</span>
                         <div class="circle-animation closed" >
                         </div>
         </button>
@@ -439,8 +452,8 @@ return `
     <div class="modal-body">
 
 <div class="links-wrapper">
-<a href="${project.link}" target="_blank" >Visit site</a>
-<a href="${project.link}" target="_blank" >Source code</a>
+<a href="${project.link}" target="_blank" >${project.siteText}</a>
+<a href="${project.code}" target="_blank" >Source code</a>
 
 </div>
 <br />
@@ -545,7 +558,8 @@ for (i = 0; i < acc.length; i++) {
         trigger: ".projects",
      scrub:4,
      pin:true,
-     start: "top +=200",
+     pinSpacing:"false",
+     start: "top +=400",
      end: "center center",
         once: true,
         onUpdate: (self) => {
@@ -721,3 +735,8 @@ gsap.registerPlugin(ScrollTrigger);
   });
 })();
 //modal
+$(document).ready(function(){
+    $(".menubtn").click(function(){
+         $(".menu-list").toggleClass("show")
+    })
+})
